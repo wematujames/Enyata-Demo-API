@@ -55,6 +55,38 @@
 						"description": "Create a new incident record"
 					},
 					"response": []
+				},
+				{
+					"name": "Create new incident",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_id\": 1,\r\n    \"incident_desc\": \"null\",\r\n    \"city\": \"ACCRA\",\r\n    \"country\": \"GHANA\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/incidents/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"incidents",
+								""
+							]
+						},
+						"description": "Get all incidents"
+					},
+					"response": []
 				}
 			],
 			"description": "Endpoints relatings incidents",
