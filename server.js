@@ -17,14 +17,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
 // Routes
-app.use("/", (req, res) => res.sendFile(__dirname + "/index.html"));
 app.use("/api/v1/incidents", require("./routes/incidents"));
-// Catch All
-app.use("*", (req, res) => {
-    res
-        .status(404)
-        .json({ statusCode: 404, success: false, message: "Not found" });
-});
+app.use("/", (req, res) => res.sendFile(__dirname + "/index.html"));
 
 // Set up custom errorhandler
 app.use(errorHander); 

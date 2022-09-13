@@ -32,7 +32,7 @@ exports.createIncident = asyncHandler(async (req, res, next) => {
 //Route             // /api/v1/incidents/
 //Method            // GET
 //Auth              // None 
-exports.getIncident = asyncHandler( async (req, res, next) => {
+exports.getIncident = asyncHandler(async (req, res, next) => {
     const incident = await Incident.findOne({ where: { incident_id : req.params.id}});
 
     if (!incident) {
@@ -43,4 +43,12 @@ exports.getIncident = asyncHandler( async (req, res, next) => {
         )
     }
     return res.status(200).json({statusCode: 200, success: true, data: incident });
+});
+
+//Route             // /api/v1/incidents/
+//Method            // GET
+//Auth              // None 
+exports.getIncidents = asyncHandler(async (req, res, next) => {
+    const incidents = await Incident.findAll();
+    return res.status(200).json({statusCode: 200, success: true, data: incidents });
 });
