@@ -3,11 +3,11 @@
         "port": 5000
     },
     "db": {
-        "name": "",
-        "host": "",
-        "dialect": ""
+        "name": "Incidents",
+        "host": "postgres://egqoaeen:trbNKGUeuBDcYGClEJUwe_SJ-vNgy3Je@surus.db.elephantsql.com/egqoaeen",
+        "dialect": "postgres"
     },
     "openweathermap": {
-        "apiKey": ""
+        "apiKey": "e7eb8b9e1e6f5f7672fc15c71a1bc122"
     }
 }

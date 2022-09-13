@@ -10,10 +10,15 @@ const errorHander = (err, req, res, next) => {
         error.message = errors
     }
 
+    if (err.name === "SequelizeDatabaseError") {
+        error.message = "Inalid incident id specified"
+    }
+
     res.status(error.statusCode || 500).json({
         success: false,
         statusCode: error.statusCode || 500,
-        error: error.message,
+        error: err,
+        // error: error.message,
         reason: error.reason || "Server error"
     });
 };

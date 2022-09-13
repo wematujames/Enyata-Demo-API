@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "80996867-a085-40de-b213-5e40042190b8",
+		"name": "EnyataDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Incidents",
+			"item": [
+				{
+					"name": "Create Incident",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/incidents/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"incidents",
+								"1"
+							]
+						},
+						"description": "Endpoint to create a new incident"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new incident",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_id\": 1,\r\n    \"incident_desc\": \"null\",\r\n    \"city\": \"ACCRA\",\r\n    \"country\": \"GHANA\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/incidents/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"incidents",
+								""
+							]
+						},
+						"description": "Create a new incident record"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints relatings incidents",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
