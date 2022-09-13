@@ -1,0 +1,13 @@
+{
+    "server": {
+        "port": 5000
+    },
+    "db": {
+        "name": "",
+        "host": "",
+        "dialect": ""
+    },
+    "openweathermap": {
+        "apiKey": ""
+    }
+}
